@@ -1,16 +1,16 @@
 import express from 'express';
+const app = express();
+
 import dotenv from 'dotenv';
+import about from './routes/about';
+import users from './routes/users';
+
 dotenv.config();
 
-const app = express();
+app.use('/about', about);
+app.use('/users', users);
+
+
 const PORT = parseInt(`${process.env.PORT || 3000}`);
-app.use(express.json());
-
-app.get('/', (request, response) => {
-  return response.send({
-    message: `Hello`,
-  });
-});
-
 app.listen(PORT, () => console.log(`Listening ${PORT}`));
 

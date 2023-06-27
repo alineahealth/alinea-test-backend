@@ -2,12 +2,12 @@
   "name": "alinea-test-backend",
   "version": "1.0.0",
   "description": "Repositório dedicado a testes técnicos backend para novos colaboradores",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "test",
     "build": "tsc",
-    "start": "node build/index.js",
-    "dev": "ts-node-dev --ignore-watch node_modules src/index.ts"
+    "start": "node dist/src/index.js",
+    "dev": "tsc -w & nodemon dist/src/index.js"
   },
   "repository": {
     "type": "git",
