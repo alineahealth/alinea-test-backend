@@ -5,6 +5,6 @@ export class userController {
     
     async auth(params: any): Promise<string>{
         const useCase = new authUseCase()
-        return useCase.auth()
+        return useCase.auth(params)
     }
 }
